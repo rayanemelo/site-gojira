@@ -14,17 +14,21 @@ header{
   background-image:  url('./images//bd.jpg');
   opacity: 0.9;
   background-repeat: no-repeat;
-  background-size:cover
+  background-size:cover;
+
 }
 header img {
 width: 300px;
 height: 300px;
 }
 
-header h1 {
+header p {
   opacity: 1;
   letter-spacing: -2px;
-  font-size:35px
+  font-size:35px;
+  color:#f2f2f2;
+  text-align: center;
+
 }
 
 .menu{
@@ -42,4 +46,73 @@ header h1 {
   color:#fff
 }
 .menu a:hover{
-  color:#CC0000}
+  color:#116ceb;
+  transition: 0.4s;
+
+}
+
+.forms{
+  /* max-width: 400px; */
+  display: flex;
+
+  justify-content: center;
+  
+  padding: 60px 0;
+  background: #f2f2f2;
+
+}
+
+.forms form{
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px 100px 30px;
+  padding: 65px;
+  background: #113c77;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.forms label{
+  color:#f2f2f2;
+  margin: 12px 0 0 2px
+}
+
+.forms input,.form textarea {
+  height: 40px;
+  width: 35vh;
+  border: none;
+  border-radius: 7px;
+  padding-left: 7px;
+  margin: 5px 0 10px 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: #777  !important;
+}
+
+.forms textarea {
+  margin-top:4px
+}
+
+.forms input:placeholder{
+  color: #777  !important;
+}
+
+.forms #mensagem{
+ height: 120px;
+}
+
+.forms button{
+  border-radius: 7px;
+  margin-top: 20px;
+  height: 48px;
+  border: none;
+  font-weight: 600;
+  color:#113c77;
+  background: #fff;
+  cursor: pointer;
+}
+
+.forms button:hover{
+  background: #113c77;
+  color:#fff;
+  border: 1px solid #fff;
+  transition: 0.5s;
+}
