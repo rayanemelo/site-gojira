@@ -54,20 +54,20 @@ header p {
   display: flex;
   justify-content: center;
   padding: 60px 0;
-  background: #f2f2f2
+  background-image: url('./images/Computer-Science-Desktop-Wallpaper.jpg')
 }
 
 .forms form{
   display: flex;
   flex-direction: column;
-  border-radius: 15px 100px 30px;
-  padding: 65px;
-  background: #113c77;
+  border-radius:20px;
+  padding: 20px 40px;
+  background:#fff;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .forms label{
-  color:#f2f2f2;
+  color:#113c77;
   margin: 12px 0 0 2px
 }
 
@@ -77,9 +77,9 @@ header p {
   border: none;
   border-radius: 7px;
   padding-left: 7px;
-  margin: 5px 0 10px 0;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 5px 0 0px 0;
   color: #777  !important;
+  border:1px solid #113c77;
 }
 
 .forms textarea {
@@ -100,15 +100,15 @@ header p {
   height: 48px;
   border: none;
   font-weight: 600;
-  color:#113c77;
-  background: #fff;
+  color:#fff;
+  background: #113c77;
   cursor: pointer;
 }
 
 .forms button:hover{
-  background: #113c77;
-  color:#fff;
-  border: 1px solid #fff;
+  background: #fff;
+  color:#113c77;
+  border: 1px solid #113c77;
   transition: 0.5s;
 }
 
@@ -153,6 +153,7 @@ header p {
   border-radius: 8px;
 }
 
+
 .info div:hover{
   opacity:1;
 }
@@ -165,10 +166,6 @@ border-radius: 10px;
 bottom:0;
 left: 11;
 font-size: 17px;
-} 
-
-.context div:last-child>img{
-  width: 250px !important;
 } 
 
 @media screen and (max-width: 825px){
