@@ -5,42 +5,35 @@
     <link rel="stylesheet" href="./index.css">
 </head>
 
-
 <body>
-
-     <header>
+    <header>
+        <p id="voltar"><a href="index.html">voltar</a></p>
         <img src="images/gojira_logo1.png" width="300" height="300">
-        <p>
-            <strong> Gojira</strong><br>
-           Computadores de Alto Desempenho
+        <p><strong> Gojira</strong><br>
+            Computadores de Alto Desempenho
         </p>
     </header>
 
-
-    <div class="menu">
+    <div class="menu" id="menu">
         <a href="sobre.html">Sobre a Gojira</a>
         <a href="produtos.html">Nossos Produtos</a>
         <a href="contato.html">Contato</a>
     </div>
-  
-        
-        <div class="forms">
-           
-            <form action="/enviar.php">
-                <label for="nome">Seu Nome</label>
-                <input type="text" id="nome" name="nome" placeholder="Nome">
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" placeholder="usuario@email.com">
-                <label for="assunto">Assunto</label>
-                <input type="text" id="assunto" name="assunto" placeholder="Assunto">
-                <label for="mensagem">Sua Mensagem</label>
-                <textarea  type="text" id="mensagem" name="mensagem" placeholder="Sua Mensagem"></textarea>
-                <button>Enviar</button>
-            </form>
-         </div>
+
+    <div class="forms">
+        <form action="/enviar.php">
+            <label for="nome">Seu Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Nome">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="usuario@email.com">
+            <label for="assunto">Assunto</label>
+            <input type="text" id="assunto" name="assunto" placeholder="Assunto">
+            <label for="mensagem">Sua Mensagem</label>
+            <textarea type="text" id="mensagem" name="mensagem" placeholder="Sua Mensagem"></textarea>
+            <button type="button">Enviar</button>
+        </form>
+    </div>
 
 </body>
-
-
 
 </html>

@@ -11,19 +11,32 @@ header{
   justify-content: center;
   align-items: center;
   padding-top:30px;
-  background-image:  url('./images//bd.jpg');
+  background-image:  url('./images/bd.jpg');
   opacity: 0.9;
   background-repeat: no-repeat;
   background-size:cover;
-
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+
+header #voltar{
+  position: absolute;
+  top: 5px;
+  left: 15px;
+  font-size:20px;
+  letter-spacing: 0px;
+}
+
+header #voltar a{
+  text-decoration: none;
+  color:#f2f2f2;
+}
+
 header img {
-width: 300px;
-height: 300px;
+width: 330px;
+height: 330px;
 }
 
 header p {
-  opacity: 1;
   letter-spacing: -2px;
   font-size:35px;
   color:#f2f2f2;
@@ -31,107 +44,145 @@ header p {
 }
 
 .menu{
-  height: 70px;
   width: 100%;
-  background-color:#212121;
+  background-color:#f2f2f2;
   display: flex;
   justify-content:space-around;
   align-items: center;
+  padding :30px 0;
 }
 
 .menu a{
+  color:#4d4d4e;
+  letter-spacing: -2px;
+  font-size:24px;
+  position: relative;
   text-decoration: none;
-  color:#fff
+  padding:3px 0;
 }
 
-.menu a:hover{
-  color:#236ed6;
-  transition: 0.4s;
+.menu a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background: #16bffd;  
+  background: -webkit-linear-gradient(to right, #16bffd, #cb3066); 
+  background: linear-gradient(to right, #16bffd, #cb3066); 
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
 }
 
-/* contato */
-.forms {
-  display: flex;
-  justify-content: center;
-  padding: 60px 0;
-  background-image: url('./images/Computer-Science-Desktop-Wallpaper.jpg')
+.menu a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
 }
 
-.forms form{
+/* home */
+.center{
   display: flex;
   flex-direction: column;
-  border-radius:20px;
-  padding: 20px 40px;
-  background:#fff;
+  align-items: center;
+  justify-content: center;
+  background-color:#f2f2f2;
+  padding:25px auto;
+  background: #16bffd;  
+  background: -webkit-linear-gradient(to right, #16bffd, #cb3066);  
+  background: linear-gradient(to right, #16bffd, #cb3066); 
+}
+
+.center div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center div>img{
+  width: 40%;
+  margin: 10px 25px 90px;
+  border-radius:5px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.forms label{
-  color:#113c77;
-  margin: 12px 0 0 2px
-}
-
-.forms input,.form textarea {
-  height: 40px;
-  width: 35vh;
-  border: none;
-  border-radius: 7px;
-  padding-left: 7px;
-  margin: 5px 0 0px 0;
-  color: #777  !important;
-  border:1px solid #113c77;
-}
-
-.forms textarea {
-  margin-top:4px
-}
-
-.forms input:placeholder{
-  color: #777  !important;
-}
-
-.forms #mensagem{
- height: 120px;
-}
-
-.forms button{
-  border-radius: 7px;
-  margin-top: 20px;
-  height: 48px;
-  border: none;
-  font-weight: 600;
-  color:#fff;
-  background: #113c77;
   cursor: pointer;
+  transition: transform .2s;
 }
 
-.forms button:hover{
-  background: #fff;
-  color:#113c77;
-  border: 1px solid #113c77;
-  transition: 0.5s;
+.center div>img:hover,
+.center .card:hover{
+  transform: scale(1.1);
+  transition: transform .2s;
+}
+
+.center p{
+  letter-spacing: -2px;
+  font-size:35px;
+  text-align: center;
+  padding:50px;
+  background: linear-gradient(to right, white 0,  #236B8E, 10%,white 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+  text-decoration: none;
+  white-space: nowrap;}
+
+  @media (max-width:880px){
+    .center div{
+      flex-direction: column;
+    }
+    
+    .center p{
+      font-size:24px
+    }
+
+    .center img{
+      width: 60% !important;
+    }
+  }
+  
+@keyframes shine{
+   0% {background-position: 0;}
+  60% {background-position: 180px;}
+  100%{background-position: 380px;}
+}
+ 
+/* sobre */
+.center .card  {
+  margin: 60px;
+  color:#f2f2f2;
+  letter-spacing: -0.8px;
+  font-size:30px;
+  text-align: center;
+  transition: transform .3s;
+  max-width: 900px;
+  cursor: pointer
 }
 
 /* produtos */
-.context{
+.products{
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 80px 0  110px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding:1px 160px 110px;
   background: #f2f2f2;
 }
 
  .info{
   display:flex;
   justify-content:center;
-  align-items:flex-end;
-  transition: 0.5s;
+  transition: 0.3s;
   cursor: pointer;
+  margin: 10px 25px 55px;
 }
 
 .info:hover {
   transform: translateY(20px);
-  transition: 0.5s ease-in;
+  transition: 0.4s ease-in;
 }
 
 .info img{
@@ -151,8 +202,7 @@ header p {
   color:#fff;
   background-color:rgba(0, 0, 0, 0.35);
   border-radius: 8px;
-}
-
+ }
 
 .info div:hover{
   opacity:1;
@@ -160,8 +210,7 @@ header p {
 
 .info p{
 position: absolute;
-text-align: center;
-color:#fff;
+color:#f2f2f2;
 border-radius: 10px;
 bottom:0;
 left: 11;
@@ -174,4 +223,74 @@ font-size: 17px;
     flex-direction: column;
   }
 }
+
+
+/* contato */
+.forms {
+  display: flex;
+  justify-content: center;
+  padding: 60px 0; 
+}
+
+#menu,.forms{
+  background: #757F9A; 
+  background: -webkit-linear-gradient(to right, #D7DDE8, #757F9A);
+  background: linear-gradient(to right, #D7DDE8, #757F9A); 
+}
+
+.forms form{
+  display: flex;
+  flex-direction: column;
+  border-radius:20px;
+  padding: 20px 40px;
+  background:#fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.forms label{
+  color:#777;
+  margin: 12px 0 0 2px
+}
+
+.forms input,.form textarea {
+  height: 40px;
+  width: 35vh;
+  border: none;
+  border-radius: 7px;
+  padding-left: 7px;
+  margin: 5px 0 0px 0;
+  color: #777  !important;
+  border:1px solid #777;
+}
+
+.forms textarea {
+  margin-top:4px
+}
+
+.forms input:placeholder{
+  color: #777  !important;
+}
+
+.forms #mensagem{
+ height: 120px;
+}
+
+.forms button{
+  border-radius: 7px;
+  margin: 20px 0;
+  height: 48px;
+  border: none;
+  font-weight: 600;
+  color:#fff;
+  background: #150d40;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.forms button:hover{
+  background: #32a2be;
+  transition: 0.4s;
+}
+
+
 
